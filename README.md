@@ -440,6 +440,9 @@ WantedBy=multi-user.target
 
 ## Проверка задания
 
+**Requirements:**
+***Перед проверкой задания необходимо установить плагин vagrant-vbguest: `vagrant plugin install vagrant-vbguest`.***
+
 1. Выполнить `vagrant up`.
 
 2. Подключиться к NFS-серверу `vagrant ssh nfs-srv`:
