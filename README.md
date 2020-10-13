@@ -323,8 +323,6 @@ success
 success
 [root@nfs-srv ~]# firewall-cmd --permanent --add-service=nfs
 success
-[root@nfs-srv ~]# firewall-cmd --add-port=2049/udp --permanent
-success
 [root@nfs-srv ~]# firewall-cmd --reload 
 success
 [root@nfs-srv ~]# firewall-cmd --list-all
@@ -343,20 +341,6 @@ public (active)
   rich rules: 
 	
 ```
-
-***По заданию необходимо смонтировать NFSv3. С использованием Kerberos-аутентификации у меня  получилось сделать это, раскомментировав и изменив в конфиге `/etc/nfs.conf` в секции `[mountd]` следующие строки:***
-
-```
-udp=y
-tcp=n
-vers2=n
-vers3=y
-vers4=n
-vers4.0=n
-vers4.1=n
-vers4.2=n
-```
-***Без указанных выше настроек шара монтировалась с Kerberos-аутентификацией только в версии NFSv4.***
 
 Создадим директорию /media/nfs_share:
 
